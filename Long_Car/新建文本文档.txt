@@ -1,0 +1,10 @@
+// QT交互
+new QWebChannel(qt.webChannelTransport, function(channel) {
+  window.bridgeJS = channel.objects.bridge;  //bridge 与QT 中一致
+  });
+
+bridgeJS.getBlocks(document.getElementById('projectName').value + "," + code);
+
+bridgeJS.getPython(code);
+
+bridgeJS.getCode(document.getElementById('projectName').value + "," + code);
